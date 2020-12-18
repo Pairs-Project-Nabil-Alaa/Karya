@@ -31,6 +31,31 @@
         <img src="img/logo.png" id='logo'>
     </nav>
 
+    <!--Log in form-->
+    <br>
+    <form id='forma' action="" method="">
+        <div class="imgcontainerlog">
+          <img src="/img/img_avatar.png" alt="Avatar" class="avatar">
+        </div>
+      
+        <div class="containerlog">
+          <label for="uname"><b>Username</b></label>
+          <input class="inpu" type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input class="inpu" type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button class='button--login-cancel' type="submit">Login</button>
+          <label>
+            <input class="inpu" type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#d4d3d3">
+          <button onclick="document.getElementById('forma').style.display='none'" class='button--login-cancel' type="button" id="cancelbtn">Cancel</button>
+          
+        </div>
+      </form>
 
     <!--Search bar-->
 
@@ -57,8 +82,6 @@
         </div>
     </form>
 
-    <!--signup form-->
-   
     
 
 
