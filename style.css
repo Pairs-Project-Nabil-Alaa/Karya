@@ -361,20 +361,20 @@ transition: 0.5s;
   margin-left: 200px;
 }
 
-/* Center the avatar image inside this container */
+/* center the avatar image inside this container */
 .imgcontainerlog {
   text-align: center;
   margin: 24px 0 0px 0;
   
 }
 
-/* Avatar image */
+/* Aaatar image */
 img.avatar {
   width: 40%;
   border-radius: 50%;
 }
 
-/* Add padding to containers */
+/* add padding to containers */
 .containerlog {
   padding: 7px;
   color: white;

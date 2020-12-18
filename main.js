@@ -39,7 +39,7 @@ $(document).ready(function () {
         $(".search-btn").click(function () {
             var selectedText = $(".search-selector").find("option:selected").text();
             if (selectedText === "Bizerte") {
-                alert('Welcome to Bizerte')
+                alert('You need to be a member, Please Sign Up first')
             }
 
         });
@@ -50,7 +50,7 @@ $(document).ready(function () {
         $(".search-btn").click(function () {
             var selectedText = $(".search-selector").find("option:selected").text();
             if (selectedText === "Tunis") {
-                alert('Tunis will be available soon..')
+                alert('You need to be a member, Please Sign Up first')
             }
 
         });
@@ -60,7 +60,7 @@ $(document).ready(function () {
         $(".search-btn").click(function () {
             var selectedText = $(".search-selector").find("option:selected").text();
             if (selectedText === "Nabeul") {
-                alert('Nabeul will be available soon..')
+                alert('You need to be a member, Please Sign Up first')
             }
 
         });
@@ -70,50 +70,54 @@ $(document).ready(function () {
 
 
 
-//Local storage /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Local storage /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//Storage function :
-$('#sgnup').click(function () {
-    
-    var username = $('#uname').val();
-    var password = $('#psw').val();
-    var repeatpassword = $('#psw-repeat').val()
-    
-
-    if(password !== repeatpassword){
-        alert("Passwords Dosen't Match");
-
-    
-
-    }
-    else
-    {
-        localStorage.setItem('uname', username);
-        localStorage.setItem('psw', password);
-        alert('Your account has been created');
-    }
-})
-
-//checking
 
 
-$('#lgin').click(function () {
-    var storedusername = localStorage.getItem('uname');
-    var storedpassword = localStorage.getItem('psw');
+    //Storage function :
+    $('#sgnup').click(function () {
+        var localData = JSON.parse(localStorage.getItem('users'))
+        var username = $('#uname').val();
+        var password = $('#psw').val();
+        var repeatpassword = $('#psw-repeat').val()
+        if (password !== repeatpassword) {
+            alert("Passwords Dosen't Match");
+        }
+        else if( Array.isArray(localData)) {
+            var data = {name: username, password: password};
+            localData.push(data);
+            localStorage.setItem('users',JSON.stringify(localData));
+            alert('Your account has been created');
+        }
+        else{
+            var users = [];
+            users.push(data);
+            localStorage.setItem('users',JSON.stringify(users));
+        }
+    })
 
-    var usernamelog = $('#unamelog').val();
-    var userpasswordlog = $('#pswlog').val();
-    
-
-    if(usernamelog == storedusername && userpasswordlog == storedpassword){
-        alert('You are logged in.');
-    }else{
-        alert('Error on login');
-    }
+    //Log checking
 
 
-})
+    $('#lgin').click(function () {
+        var storedusername = localStorage.getItem('uname');
+        var storedpassword = localStorage.getItem('psw');
+
+        var usernamelog = $('#unamelog').val();
+        var userpasswordlog = $('#pswlog').val();
+
+
+        if (usernamelog == storedusername && userpasswordlog == storedpassword) {
+            alert('You are logged in.');
+        } else {
+            alert('Error on login');
+        }
+
+
+    })
+
+
 
 
 
