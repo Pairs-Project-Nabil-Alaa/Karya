@@ -2,14 +2,25 @@
 $(document).ready(function () {
 
     $('#forma').hide()
+    $('#formasignup').hide()
+
     
     $('#login').click(function(){
-        $('#forma').show()
-        
-
-    })
+        $('#forma').hide()
+        $('#formasignup').hide()
+        $('#forma').fadeIn(1000)
+     })
     
-    // Select Button//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     $('#signup-button').click(function(){
+        $('#formasignup').fadeIn(1000)
+        $('#forma').hide()
+     })
+     
+     $('#home').click(function(){
+        $('#forma').hide()
+        $('#formasignup').hide()
+     })
+    // Select Button////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     //  var sel = document.getElementsByClassName('search-selector')
      
@@ -55,6 +66,5 @@ $(document).ready(function () {
 
 
 
-//log in /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
