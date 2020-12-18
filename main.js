@@ -1,7 +1,7 @@
-//console.log('test')
 $(document).ready(function () {
 
-    //Navigation Bar Manipulation :////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
+/////////////////////////////Navigation Bar Manipulation 
+
     $('#forma').hide()
     $('#formasignup').hide()
 
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
 
 
-    // Select Button Manipulation////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////Select Button Manipulation
 
     //  var sel = document.getElementsByClassName('search-selector')
 
@@ -44,7 +44,6 @@ $(document).ready(function () {
 
         });
     });
-
 
     $(function () {
         $(".search-btn").click(function () {
@@ -66,16 +65,10 @@ $(document).ready(function () {
         });
     });
 
+////////////////////////////Local storage
 
+////////////////////////////Storage function
 
-
-
-    //Local storage /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-    //Storage function :
     $('#sgnup').click(function () {
         var localData = JSON.parse(localStorage.getItem('users'))
         var username = $('#uname').val();
@@ -100,8 +93,7 @@ $(document).ready(function () {
         }
     })
 
-    //Log checking
-
+////////////////////////////Log checking
 
     $('#lgin').click(function () {
 
@@ -110,16 +102,11 @@ $(document).ready(function () {
 
             var usernamelog = $('#unamelog').val();
             var userpasswordlog = $('#pswlog').val();
-
-
             if (usernamelog == localData[i].name && userpasswordlog == localData[i].password) {
                 return alert('You are logged in.');
             }
-
         }
-
         return alert('Error on login!');
-
     })
 
 
