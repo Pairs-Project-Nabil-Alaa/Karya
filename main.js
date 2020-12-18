@@ -84,38 +84,43 @@ $(document).ready(function () {
         if (password !== repeatpassword) {
             alert("Passwords Dosen't Match");
         }
-        else if( Array.isArray(localData)) {
-            var data = {name: username, password: password};
+        else if (Array.isArray(localData)) {
+            var data = {
+                name: username,
+                password: password
+            };
             localData.push(data);
-            localStorage.setItem('users',JSON.stringify(localData));
+            localStorage.setItem('users', JSON.stringify(localData));
             alert('Your account has been created');
         }
-        else{
+        else {
             var users = [];
             users.push(data);
-            localStorage.setItem('users',JSON.stringify(users));
+            localStorage.setItem('users', JSON.stringify(users));
         }
     })
 
     //Log checking
 
 
-    $('#lgin').click(function () {
-        var storedusername = localStorage.getItem('uname');
-        var storedpassword = localStorage.getItem('psw');
+     $('#lgin').click(function () {
+        
+         var localData = JSON.parse(localStorage.getItem('users'))
+         for(var i = 1; i < localData.length; i++ ){
+        
+         var usernamelog = $('#unamelog').val();
+         var userpasswordlog = $('#pswlog').val();
 
-        var usernamelog = $('#unamelog').val();
-        var userpasswordlog = $('#pswlog').val();
 
+         if (usernamelog == localData[i].name && userpasswordlog == localData[i].password) {
+             return alert('You are logged in.');
+         } 
 
-        if (usernamelog == storedusername && userpasswordlog == storedpassword) {
-            alert('You are logged in.');
-        } else {
-            alert('Error on login');
         }
-
-
-    })
+        
+        return alert('Error on login!');
+        
+     })
 
 
 
