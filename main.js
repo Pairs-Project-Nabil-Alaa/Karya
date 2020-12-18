@@ -103,24 +103,24 @@ $(document).ready(function () {
     //Log checking
 
 
-     $('#lgin').click(function () {
-        
-         var localData = JSON.parse(localStorage.getItem('users'))
-         for(var i = 1; i < localData.length; i++ ){
-        
-         var usernamelog = $('#unamelog').val();
-         var userpasswordlog = $('#pswlog').val();
+    $('#lgin').click(function () {
+
+        var localData = JSON.parse(localStorage.getItem('users'))
+        for (var i = 1; i < localData.length; i++) {
+
+            var usernamelog = $('#unamelog').val();
+            var userpasswordlog = $('#pswlog').val();
 
 
-         if (usernamelog == localData[i].name && userpasswordlog == localData[i].password) {
-             return alert('You are logged in.');
-         } 
+            if (usernamelog == localData[i].name && userpasswordlog == localData[i].password) {
+                return alert('You are logged in.');
+            }
 
         }
-        
+
         return alert('Error on login!');
-        
-     })
+
+    })
 
 
 

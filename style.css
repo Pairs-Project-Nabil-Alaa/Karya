@@ -413,3 +413,42 @@ span.psw {
 
   
 }
+
+/* ///////////////////////////// Style of welcome.html only  */
+
+h6 {
+  font-size: small;
+  margin-left: 50%;
+}
+
+#home-welcome {
+  box-sizing: border-box;
+  text-transform: none;
+  display: inline-block;
+  margin-bottom: 0;
+  font-family: Helvetica,Arial,sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  touch-action: manipulation;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 21px;
+  padding: 7px 15px;
+  color: #fff;
+  background: transparent;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  margin-top: 20px;
+  position: absolute;
+  left: 90%;
+  border: #fff solid 2px;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+#home-welcome:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
