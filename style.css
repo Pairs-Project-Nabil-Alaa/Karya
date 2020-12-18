@@ -178,6 +178,41 @@
   transition: 0.5s;
 }
 
+#home {
+  box-sizing: border-box;
+  text-transform: none;
+  display: inline-block;
+  margin-bottom: 0;
+  font-family: Helvetica,Arial,sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  touch-action: manipulation;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 21px;
+  padding: 7px 15px;
+  background: none;
+  border:  2px;
+  color: #fff;
+  margin-top: 22px;
+  position:  absolute;
+  left: 65%;
+  transition: 0.5s;
+  
+}
+
+
+#home:hover{
+
+  background-color: #383737;
+  border: #000000  1px;
+  color : white;
+  transition: 0.5s;
+}
+
 /*logo//////////////////////*/
 
 #logo {
@@ -273,4 +308,108 @@ transition: 0.5s;
   transition: 0.5s;
 }
 
-/*signup modal/////////////////////////////////////////////////*/
+/*Login modal/////////////////////////////////////////////////*/
+
+/* Bordered form */
+#forma {
+  border: 3px solid #f1f1f1;
+  position: relative;
+  background-color: rgba(187, 186, 186,0.7);;
+  width: 500px;
+  border-radius: 9px;
+  margin-bottom: 500px;
+  margin-left: 450px;
+  
+
+  
+}
+
+/* Full-width inputs */
+.inpu[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button--login-cancel {
+  background-color: #2e64e2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 9px;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+/* Add a hover effect for buttons */
+.button--login-cancel:hover {
+  transition: 0.5s;
+  background-color: #0d2d79;
+}
+
+/* Extra style for the cancel button (red) */
+#cancelbtn {
+  width: auto;
+  padding: 12px 28px;
+  background-color: #f44336;
+  margin-left: 200px;
+}
+
+/* center the avatar image inside this container */
+.imgcontainerlog {
+  text-align: center;
+  margin: 24px 0 0px 0;
+  
+}
+
+/* Aaatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* add padding to containers */
+.containerlog {
+  padding: 7px;
+  color: white;
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: 800;
+  
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+/*sIGN UP/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#formasignup {
+  border: 3px solid #f1f1f1;
+  position: relative;
+  background-color: rgba(187, 186, 186,0.7);;
+  width: 500px;
+  border-radius: 9px;
+  margin-bottom: 500px;
+  margin-left: 450px;
+  
+
+  
+}
