@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya.com</title>
+</head>
+
+<body>
+
+    <!--Background slide show-->
+
+    <div class="fades">
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+        <figure></figure>
+    </div>
+
+    <!--Nvigation bar-->
+
+    <nav>
+        <button id="home-welcome">You are logged in!</button>
+        <img src="img/logo.png" id='logo'>
+    </nav>
+
+    <!--Search bar-->
+
+    <form class="search-bar" action="">
+        <div id='headlight'>
+            <h4>Welcome, you are now a new member in Karya.com,</h4><br>
+            <h1>Make your move.</h1>
+        </div><br>
+
+        <div>
+            <ul class="search">
+                <li>
+                    <select class="search-selector" name="option">
+                        <option id='opacity' value="disabled selected">Where do you want to rent?</option>
+                        <option id='bizerte' value="1">Bizerte</option>
+                        <option id='tunis' value="2">Tunis</option>
+                        <option id='nabeul' value="3">Nabeul</option>
+                    </select>
+                </li>
+                <li>
+                    <button class="search-btn">Search</button>
+                </li>
+            </ul>
+        </div>
+        <h6>Trust me, it will not be a "karya mchouma"</h6>
+    </form>
+
+    <script src='welcome-main.js'></script>
+</body>
+
+</html>

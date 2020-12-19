@@ -2,125 +2,123 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karya.com</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='main.js'></script>
+  <title>Karya.com</title>
 </head>
 
 <body>
-    <!--Background slide show-->
 
-    <div class="fades">
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
+  <!--Background slide show-->
+
+  <div class="fades">
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+    <figure></figure>
+  </div>
+
+  <!--Nvigation bar-->
+
+  <nav>
+    <button id="signup-button">Sign up</button>
+    <button id="login">Log in</button>
+
+    <p id='bar'>|</p>
+
+    <button id="categories">Categories</button>
+    <button id="home">Home</button>
+    <img src="img/logo.png" id='logo'>
+  </nav>
+
+  <!--Sign Up form-->
+
+  <br>
+  <form id='formasignup' action="" method="">
+    <div class="imgcontainerlog">
+      <img src="img/img_avatar.png" alt="Avatar" class="avatar">
     </div>
-    <!--Nvigation bar-->
 
-    <nav>
-        <button id="signup-button">Sign up</button>
-        <button id="login">Log in</button>
+    <div class="containerlog">
+      <label for="uname"><b>Username</b></label>
+      <input id='uname' class="inpu" type="text" placeholder="Enter Username" name="uname" required>
 
+      <label for="psw"><b>Password</b></label>
+      <input id='psw' class="inpu" type="password" placeholder="Enter Password" name="psw" required>
 
-        <p id='bar'>|</p>
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input id='psw-repeat' type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-        <button id="categories">Categories</button>
-        <button id="home">Home</button>
-        <img src="img/logo.png" id='logo'>
-    </nav>
+      <button id='sgnup' class='button--login-cancel' type="submit">Sign Up</button>
+      <label>
+        <input class="inpu" type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
 
-    <!--Sign Up form-->
-    <br>
-    <form id='formasignup' action="" method="">
-        <div class="imgcontainerlog">
-          <img src="img/img_avatar.png" alt="Avatar" class="avatar">
-        </div>
-      
-        <div class="containerlog">
-          <label for="uname"><b>Username</b></label>
-          <input id='uname' class="inpu" type="text" placeholder="Enter Username" name="uname" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input id='psw' class="inpu" type="password" placeholder="Enter Password" name="psw" required>
+    <div class="container" style="background-color:#d4d3d3">
+      <button onclick="document.getElementById('formasignup').style.display='none'" class='button--login-cancel'
+        type="button" id="cancelbtn">Cancel</button>
+    </div>
+  </form>
 
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input id='psw-repeat' type="password" placeholder="Repeat Password" name="psw-repeat" required>    
-      
-          <button id='sgnup' class='button--login-cancel' type="submit">Sign Up</button>
-          <label>
-            <input class="inpu" type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-      
-        <div class="container" style="background-color:#d4d3d3">
-          <button onclick="document.getElementById('formasignup').style.display='none'" class='button--login-cancel' type="button" id="cancelbtn">Cancel</button>
-          
-        </div>
-      </form>
+  <!--Log in form-->
 
+  <br>
+  <form id='forma' action="" method="">
+    <div class="imgcontainerlog">
+      <img src="img/img_avatar.png" alt="Avatar" class="avatar">
+    </div>
 
-    <!--Log in form-->
-    <br>
-    <form id='forma' action="" method="">
-        <div class="imgcontainerlog">
-          <img src="img/img_avatar.png" alt="Avatar" class="avatar">
-        </div>
-      
-        <div class="containerlog">
-          <label for="unamelog"><b>Username</b></label>
-          <input id ='unamelog' class="inpu" type="text" placeholder="Enter Username" name="unamelog" required>
-      
-          <label for="pswlog"><b>Password</b></label>
-          <input id='pswlog' class="inpu" type="password" placeholder="Enter Password" name="pswlog" required>
-      
-          <button id='lgin' class='button--login-cancel' type="submit">Login</button>
-          <label>
-            <input class="inpu" type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-      
-        <div class="container" style="background-color:#d4d3d3">
-          <button onclick="document.getElementById('forma').style.display='none'" class='button--login-cancel' type="button" id="cancelbtn">Cancel</button>
-          
-        </div>
-      </form>
+    <div class="containerlog">
+      <label for="unamelog"><b>Username</b></label>
+      <input id='unamelog' class="inpu" type="text" placeholder="Enter Username" name="unamelog" required>
 
-    <!--Search bar-->
+      <label for="pswlog"><b>Password</b></label>
+      <input id='pswlog' class="inpu" type="password" placeholder="Enter Password" name="pswlog" required>
 
-    <form class="search-bar" action="">
-        <div id='headlight'>
-            <h1>Make your move.</h1><br>
-            <h3>Rent a house.<h3>
-        </div><br>
+      <button id='lgin' class='button--login-cancel' type="submit">Login</button>
+      <label>
+        <input class="inpu" type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
 
-        <div>
-            <ul class="search">
-                <li>
-                    <select class="search-selector" name="option">
-                        <option id='opacity' value="disabled selected">Where do you want to rent?</option>
-                        <option id='bizerte' value="1">Bizerte</option>
-                        <option id='tunis' value="2">Tunis</option>
-                        <option id='nabeul' value="3">Nabeul</option>
-                    </select>
-                </li>
-                <li>
-                    <button class="search-btn">Search</button>
-                </li>
-            </ul>
-        </div>
-    </form>
+    <div class="container" style="background-color:#d4d3d3">
+      <button onclick="document.getElementById('forma').style.display='none'" class='button--login-cancel' type="button"
+        id="cancelbtn">Cancel</button>
+
+    </div>
+  </form>
+
+  <!--Search bar-->
+
+  <form class="search-bar" action="">
+    <div id='headlight'>
+      <h1>Make your move.</h1><br>
+      <h3>Rent a house.<h3>
+    </div><br>
+
+    <div>
+      <ul class="search">
+        <li>
+          <select class="search-selector" name="option">
+            <option id='opacity' value="">Where do you want to rent?</option>
+            <option id='bizerte' value="1">Bizerte</option>
+            <option id='tunis' value="2">Tunis</option>
+            <option id='nabeul' value="3">Nabeul</option>
+          </select>
+        </li>
+        <li>
+          <button class="search-btn">Search</button>
+        </li>
+      </ul>
+    </div>
+  </form>
 
 
-    
-
-
-
-
-    <script src='main.js'></script>
 </body>
 
 </html>
