@@ -421,18 +421,14 @@ h6 {
   line-height: 21px;
   padding: 7px 15px;
   color: #fff;
-  background: transparent;
+  background: white;
+  color : black;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
   margin-top: 20px;
   position: absolute;
-  left: 90%;
+  left: 80%;
   border: #fff solid 2px;
   border-radius: 4px;
   transition: 0.5s;
 }
 
-#home-welcome:hover {
-  background-color: #fff;
-  color: #000;
-  transition: 0.5s;
-}
